@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+MANIFEST
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Project specific
+sessions/
+captcha_log.json
+debug_*.png
+*.log
+
+# User config files (keep examples)
+config.json
+config.yaml
+config.yml
+!config.example.json
+!config.example.yaml
+!config.automation.yaml
+!config.debug.yaml
+
+# OS
+.DS_Store
+Thumbs.db

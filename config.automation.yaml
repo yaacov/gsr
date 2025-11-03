@@ -1,0 +1,14 @@
+# GSR Config: Automation Mode
+# Fast, headless, JSON output, no images
+# Usage: python main.py --config config.automation.yaml
+
+query: "search query here"
+max_results: 5
+typing: fast
+headless: true
+no_images: true
+timeout: 60
+verbose: 0
+quiet: true
+output_format: json
+

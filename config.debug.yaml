@@ -1,0 +1,15 @@
+# GSR Config: Debug Mode
+# Visible browser, slow typing, full debug logging
+# Usage: python main.py --config config.debug.yaml
+
+query: "test query"
+max_results: 5
+typing: slow
+headless: false
+no_images: false
+timeout: 60
+new_session: true
+verbose: 2
+quiet: false
+output_format: text
+
