@@ -91,6 +91,6 @@ make publish
 
 ## License
 
-MIT License - Copyright (c) 2025 Yaacov Zamir <kobi.zamir@gmail.com>
+MIT License - Copyright (c) 2025 Yaacov Zamir
 
 For educational and research purposes.
