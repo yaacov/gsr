@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "google-search-resource"
-version = "0.0.1"
+version = "0.0.2"
 description = "A tool for researching and analyzing Google search page behavior and structure"
 readme = "README.md"
 authors = [
@@ -63,18 +63,16 @@ Repository = "https://github.com/yaacov/gsr"
 Issues = "https://github.com/yaacov/gsr/issues"
 
 [project.scripts]
-gsr = "main:main"
+gsr = "gsr.cli:main"
 
 [tool.setuptools]
-packages = ["modules"]
+packages = ["gsr"]
 include-package-data = true
 
 [tool.setuptools.package-data]
-"*" = [
-    "config.example.yaml",
-    "config.example.json",
-    "config.automation.yaml",
-    "config.debug.yaml",
+"gsr" = [
+    "*.yaml",
+    "*.json",
 ]
 
 [tool.black]
@@ -110,4 +108,3 @@ python_files = ["test_*.py"]
 python_classes = ["Test*"]
 python_functions = ["test_*"]
 addopts = "-v --tb=short"
-

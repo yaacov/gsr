@@ -12,6 +12,16 @@ GSR is designed for legitimate research purposes:
 
 ## Installation
 
+### From PyPI
+
+```bash
+# Install the package
+pip install google-search-resource
+
+# Install playwright browsers
+playwright install chromium firefox
+```
+
 ### From Source
 
 ```bash
@@ -26,19 +36,54 @@ make setup
 source venv/bin/activate
 ```
 
-### Test application
+## Usage
+
+### Command Line Interface
+
+After installation, use the `gsr` command:
 
 ```bash
-python main.py --help
+# Basic usage with default query
+gsr
+
+# Custom search query
+gsr --query "machine learning"
+
+# Headless mode (no browser window)
+gsr --headless --query "python web scraping"
+
+# Get help
+gsr --help
+```
+
+### Available CLI Options
+
+```bash
+gsr [OPTIONS]
+
+Options:
+  --query, -q TEXT          Search query
+  --headless                Run browser in headless mode
+  --new-session             Force create new session
+  --session-id TEXT         Use specific session ID
+  --typing [fast|normal|slow]  Typing speed style
+  --max-results INT         Maximum results to display
+  --verbose, -v             Increase verbosity (-v: INFO, -vv: DEBUG)
+  --quiet                   Suppress all output except results
+  --timeout INT             Timeout in seconds
+  --browser [chromium|firefox]  Browser to use
+  --output-format [text|json|csv]  Output format
+  --no-images               Disable image loading
+  --config PATH             Load configuration from YAML/JSON file
 ```
 
 ## Usage Examples
 
-### Basic Search
+### Library Usage
 
 ```python
-from modules.searcher import HumanLikeGoogleSearcher
-from modules.enums import SearchStatus
+from gsr.searcher import HumanLikeGoogleSearcher
+from gsr.enums import SearchStatus
 
 # Simple search with defaults
 searcher = HumanLikeGoogleSearcher()
