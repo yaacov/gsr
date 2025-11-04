@@ -4,7 +4,7 @@ A tool for researching and analyzing Google search page behavior and structure.
 
 ## Purpose
 
-GSR is designed for legitimate research purposes:
+GSR is designed for research purposes:
 - Understanding how Google search pages are structured
 - Analyzing search result formatting
 - Studying how search interfaces change over time
