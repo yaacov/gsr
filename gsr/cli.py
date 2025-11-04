@@ -8,8 +8,8 @@ import logging
 import sys
 import json
 from pathlib import Path
-from modules.searcher import HumanLikeGoogleSearcher
-from modules.enums import SearchStatus
+from gsr.searcher import HumanLikeGoogleSearcher
+from gsr.enums import SearchStatus
 
 logger = logging.getLogger(__name__)
 

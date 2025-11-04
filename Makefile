@@ -38,7 +38,7 @@ run: ## Run the main script (default query)
 		echo "Virtual environment not found. Run 'make install' first."; \
 		exit 1; \
 	fi
-	@$(PYTHON_VENV) main.py
+	@$(PYTHON_VENV) -m gsr.cli
 
 lint: ## Check code style with pylint (if installed)
 	@if [ ! -d "$(VENV)" ]; then \
@@ -47,7 +47,7 @@ lint: ## Check code style with pylint (if installed)
 	fi
 	@echo "Linting code..."
 	@if $(PIP) list | grep -q pylint; then \
-		$(PYTHON_VENV) -m pylint main.py modules/*.py; \
+		$(PYTHON_VENV) -m pylint gsr/*.py; \
 	else \
 		echo "pylint not installed. Run 'make install-dev' first"; \
 	fi
@@ -59,7 +59,7 @@ format: ## Format code with black (if installed)
 	fi
 	@echo "Formatting code..."
 	@if $(PIP) list | grep -q black; then \
-		$(PYTHON_VENV) -m black main.py modules/; \
+		$(PYTHON_VENV) -m black gsr/; \
 	else \
 		echo "black not installed. Run 'make install-dev' first"; \
 	fi
@@ -71,7 +71,7 @@ format-check: ## Check code formatting without modifying (useful for CI)
 	fi
 	@echo "Checking code formatting..."
 	@if $(PIP) list | grep -q black; then \
-		$(PYTHON_VENV) -m black --check --diff main.py modules/; \
+		$(PYTHON_VENV) -m black --check --diff gsr/; \
 	else \
 		echo "black not installed. Run 'make install-dev' first"; \
 	fi
